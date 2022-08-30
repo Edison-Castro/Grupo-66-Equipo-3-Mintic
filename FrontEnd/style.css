@@ -1,0 +1,35 @@
+.header {
+background: url(img/Banner_2.png);
+border: 2PX solid #73ad21;
+height: 200px;
+}
+
+.footer  {
+    background-color: #292C44;
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: white;
+  }
+.fixed{
+  position: fixed;
+  top: 250px;
+  right: 20px;
+  border: 2PX solid #73ad21;
+}
+.relative{
+  position: relative;
+  left: 20px;
+  top: 20px;
+  width: 800px;
+  border: 2PX solid #73ad21;
+}
+.relative2{
+  position: relative;
+  left: 350px;
+  top: 10px;
+  width: 800px;
+  
+}

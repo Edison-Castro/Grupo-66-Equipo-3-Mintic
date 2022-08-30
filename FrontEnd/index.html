@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas de Gestion</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <header class="header">
+       <h1>..</h1>   
+   </header>
+
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+       <li class="nav-item" role="presentation">
+         <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Formulario</button>
+       </li>
+        <li class="nav-item" role="presentation">
+         <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Consultas</button>
+        </li>           
+   </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+          
+            <div class= fixed>
+              <table border = "2"> 
+                <tr>
+                  <td>
+                     <center><h1 class="titulo">Plantilla Informacion <br>Tripulante</h1></center>
+                     <br>
+                     <form action="#" method="post" >
+                       
+                       <center>
+                             <p><input type="text" placeholder="Nombre del visitante" name="ape" size="25" class="cuadro" ></p>
+                             <p><input type="text" placeholder="Documento" name="ape" size="25" class="cuadro" ></p>
+                             <p><input type="text" placeholder="RA que solicita el ingreso" name="ape" size="25" class="cuadro" ></p> 
+                              <img src="img/copy.png" width="70px" alt="">
+                             
+                      </center>
+     
+                     </form>
+         
+                  </td>
+              </tr>
+              </table>
+            </div>     
+
+            <div class="relative">
+              <br>
+              <br>
+              <div class="row mt-2">  
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+              <div class="input-group row-sm-5 row-md-5 row-lg-5 row-xl-5"id ='fecha1'>
+                <input type="date" id="fecha" class="form-control " autocomplete="off">
+              </div>
+            </div>
+        
+            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8"id ='observaciones1'>
+             <input type="text" id="observaciones1" class="form-control" placeholder="Observaciones" autocomplete="off">
+           </div>
+          </div>
+        
+          <div class="row mt-3">  
+        <div class="col-sm-7 col-md-7 col-lg-7 col-xl-7">
+          <div class="input-group row-sm-5 row-md-5 row-lg-5 row-xl-5"id ='punto1'>
+            <input type="text" id="punto" class="form-control" placeholder="Nombre del Punto" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3"id ='Modelo1'>
+          <input type="text" id="Modelo" class="form-control" placeholder="Modelo" autocomplete="off">
+        </div>
+
+        <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2"id ='Dispositivo1'>
+         <input type="text" id="Dispositivo" class="form-control" placeholder="Dispositivo" autocomplete="off">
+       </div>
+      </div>
+    
+  <div class="row mt-2">  
+    <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3">
+      <div class="input-group row-sm-5 row-md-5 row-lg-5 row-xl-5"id ='Id Ra1'>
+        <input type="text" id="Id Ra" class="form-control" placeholder="Id Ra " autocomplete="off">
+      </div>
+    </div>
+
+    <div class="col-sm-9 col-md-9 col-lg-9 col-xl-9"id ='Nombre_RA1'>
+     <input type="text" id="Nombre_RA" class="form-control" placeholder="Nombre Representante" autocomplete="off">
+   </div>
+  </div>
+  <div class="row mt-3">  
+    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+      <div class="input-group row-sm-5 row-md-5 row-lg-5 row-xl-5"id ='planilla1'>
+        <input type="text" id="planilla" class="form-control" placeholder="#Planilla" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4"id ='Base1'>
+     <input type="text" id="Base" class="form-control" placeholder="Base" autocomplete="off">
+   </div>
+    <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4"id ='Tiposobre1'>
+    <input type="text" id="Tiposobre" class="form-control" placeholder="Tipo de sobre" autocomplete="off">
+  </div>
+</div>
+<div class="row mt-3">  
+  <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+    <div class="input-group row-sm-5 row-md-5 row-lg-5 row-xl-5"id ='Consecutivo1'>
+      <input type="text" id="Consecutivo" class="form-control" placeholder="Consecutivo sobre" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2"id ='N_Sobre'>
+   <input type="text" id="N_Sobr" class="form-control" placeholder="N° Sobre" autocomplete="off">
+ </div>
+ <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
+  <div class="input-group row-sm-5 row-md-5 row-lg-5 row-xl-5"id ='fecha2'>
+    <input type="date" id="fecha2" class="form-control " autocomplete="off">
+  </div>
+</div>
+</div>
+<br>
+
+<div class="relative2">
+<img src="img/enviar.png" width="50px" alt="">
+</div>
+<br>
+</div>
+
+ <br>
+ <br>
+
+ </div>
+        
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">Validador</div>
+    </div>
+       
+
+    <footer class="text-center text-white" style="background-color: #45637d;">    
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2022 Copyright:
+          <a class="text-white" href="#">Grupo 66 Equipo 3 Mintic Gestor Información para Recaudo</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      
+
+
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/popper.min.js"></script>
+</body>
+</html>
