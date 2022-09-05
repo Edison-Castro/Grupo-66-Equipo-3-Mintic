@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Perfil Representante</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+    <link rel="shortcut icon" href="/proyecto_web/assets/icons/recaudo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  </head>
+
+  <body>
+    <!-- cabecera -->
+    <header class="sticky-top">
+      <nav id="nav-repre" class="navbar navbar-dark ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="inicioRepresentante.html" id="titulo_banner">
+            <img src="assets/icons/recaudo.png" alt="" width="30" height="24" class="d-inline-block align-text-top" />
+            Gestor de Información Recaudo
+          </a>
+
+          <div class="d-flex" role="search">
+            <div class="dropdown">
+              <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Representante
+                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="35"
+                  alt="Black and White Portrait of a Man" loading="lazy" />
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item bg-warning" href="index.html">Salir</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Navbar Menu-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-tabs">
+                <a class="nav-link" href="/proyecto_web/inicioRepresentante.html">Registrar Planillas</a>
+              </li>
+              <li class="nav-tabs">
+                <a class="nav-link" href="/proyecto_web/consultaRepresentante.html">Consultar Planillas</a>
+              </li>
+            </ul>
+            <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+      <!-- Navbar Menu-->
+    </header>
+    <!-- formulario de planillas -->
+    <div class="container-fluid">
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <div class="card bg-default">
+            <h5 class="card-header">Registro de Planillas Recaudo</h5>
+            <div class="card-body">
+              <form>
+                <!-- fecha recolección -->
+                <div class="row mb-3">
+                  <label for="fRecoleccion" class="col-sm-4 col-form-label">Fecha de Recolección</label>
+                  <div class="col-sm-8">
+                    <input type="date" class="form-control" id="fRecoleccion">
+                  </div>
+                </div>
+                <!-- numero de planilla -->
+                <div class="row mb-3">
+                  <label for="nPlanilla" class="col-sm-4 col-form-label"># Planilla</label>
+                  <div class="col-sm-8">
+                    <input type="number" class="form-control" id="nPlanilla" required>
+                  </div>
+                </div>
+                <!-- dinero base -->
+                <div class="row mb-3">
+                  <label for="base" class="col-sm-4 col-form-label">Base $</label>
+                  <div class="col-sm-8">
+                    <input type="number" class="form-control" id="base" required>
+                  </div>
+                </div>
+                <!-- consecutivo sobre -->
+                <div class="row mb-3">
+                  <label for="consecutivoSobre" class="col-sm-4 col-form-label">Consecutivo Sobre</label>
+                  <div class="col-sm-8">
+                    <input type="number" class="form-control" id="consecutivoSobre" required>
+                  </div>
+                </div>
+                <!-- fecha sobre -->
+                <div class="row mb-3">
+                  <label for="fSobre" class="col-sm-4 col-form-label">Fecha Sobre</label>
+                  <div class="col-sm-8">
+                    <input type="date" class="form-control" id="fSobre">
+                  </div>
+                </div>
+                <!-- nombre punto -->
+                <div class="row mb-3">
+                  <label for="nombrePunto" class="col-sm-4 col-form-label">Nombre del Punto</label>
+                  <div class="col-sm-8">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Seleccione</option>
+                      <option value="1">Punto Recaudo Bogota Centro</option>
+                      <option value="2">Punto Recaudo Bogota Sur</option>
+                      <option value="3">Punto Recaudo Bogota Norte</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- modelo punto -->
+                <div class="row mb-3">
+                  <label for="modeloPunto" class="col-sm-4 col-form-label">Modelo Punto</label>
+                  <div class="col-sm-8">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Seleccione</option>
+                      <option value="1">Centro Comercial</option>
+                      <option value="2">Portal</option>
+                      <option value="3">Estación Movil</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- dispositivos -->
+                <div class="row mb-3">
+                  <label for="idDispositivo" class="col-sm-4 col-form-label">Dispositivos</label>
+                  <div class="col-sm-8">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Seleccione</option>
+                      <option value="1">1234568</option>
+                      <option value="2">9854513</option>
+                      <option value="3">1454545</option>
+                      <option value="4">5587548</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- id representantes -->
+                <div class="row mb-3">
+                  <label for="idRepresentante" class="col-sm-4 col-form-label">Id Representante</label>
+                  <div class="col-sm-8">
+                    <select id="idRepresentante" onchange="rellenarRep()" class="form-select"
+                      aria-label="Default select example">
+                      <option selected>Seleccione</option>
+                      <option value="1">1234568</option>
+                      <option value="2">9854513</option>
+                      <option value="3">1454545</option>
+                      <option value="4">5587548</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- nombre representante -->
+                <div class="row mb-3">
+                  <label for="representante" class="col-sm-4 col-form-label">Representante</label>
+                  <div class="col-sm-8">
+                    <div id="textRepresentante" class="p-3 bg-light "></div>
+                  </div>
+                </div>
+                <!-- tipo de sobre -->
+                <div class="row mb-3">
+                  <label for="tipoSobre" class="col-sm-4 col-form-label">Tipo Sobre</label>
+                  <div class="col-sm-8">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Seleccione</option>
+                      <option value="1">Base</option>
+                      <option value="2">Recaudo</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- observaciones -->
+                <div class="row mb-3">
+                  <label for="observaciones" class="col-sm-4 col-form-label">Observaciones</label>
+                  <div class="col-sm-8">
+                    <textarea class="form-control" placeholder="Escribe aqui tus observaciones"
+                      id="observacionesTextarea"></textarea>
+                  </div>
+                </div>
+                <!-- boton de registro -->
+                <div class="text-center">
+                  <button id="registroPlanillaButtom" type="submit" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-save" viewBox="0 0 16 16">
+                      <path
+                        d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z" />
+                    </svg>
+                    Registrar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- segundo formulario -->
+        <div class="col-md-6">
+          <div class="card">
+            <h5 class="card-header">Información Tripulante</h5>
+            <div class="card-body">
+              <!-- nombre tripulante -->
+              <div class="row mb-3">
+                <label for="nombreTripulante" class="col-sm-4 col-form-label">Nombre Tripulante</label>
+                <div class="col-sm-8">
+                  <input type="text" class="form-control" id="nombreTripulante">
+                </div>
+              </div>
+              <!-- documento -->
+              <div class="row mb-3">
+                <label for="documento" class="col-sm-4 col-form-label">Documento</label>
+                <div class="col-sm-8">
+                  <input type="number" class="form-control" id="documento">
+                </div>
+              </div>
+              <!-- RA que solicita -->
+              <div class="row mb-3">
+                <label for="RASolicitud" class="col-sm-4 col-form-label">RA Solicitud</label>
+                <div class="col-sm-8">
+                  <input type="number" class="form-control" id="RASolicitud">
+                </div>
+              </div>
+              <!-- boton de tripulante -->
+              <div class="text-center">
+                <button id="registroTripulanteButtom" type="submit" class="btn btn-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-clipboard2-check-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5Z" />
+                    <path
+                      d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585c.055.156.085.325.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5c0-.175.03-.344.085-.5Zm6.769 6.854-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708.708Z" />
+                  </svg>
+                  Copiar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted mt-3 sticky-bottom">
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2022 Copyright:
+        <a class="text-reset fw-bold">Grupo 66 Equipo 3 Mintic Gestor Información para Recaudo</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!--bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"></script>
+    <!--sweetalert2-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- script js -->
+    <script src="/proyecto_web/assets/js/rellenarRep.js"></script>
+  </body>
+
+</html>

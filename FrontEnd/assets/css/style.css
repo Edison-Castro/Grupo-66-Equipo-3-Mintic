@@ -1,0 +1,19 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* index html */
+#formLogin{
+    width: 400px;
+    margin: auto;
+}
+
+/* headers inicios */
+#nav-lider,
+#nav-repre{
+    background-image: url(/proyecto_web/assets/img/bannertullave.png);
+    height: 100px;
+}
+
+#titulo_banner{
+    color: white;
+}
