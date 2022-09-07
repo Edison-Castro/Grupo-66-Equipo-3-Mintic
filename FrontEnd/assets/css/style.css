@@ -10,7 +10,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* headers inicios */
 #nav-lider,
 #nav-repre{
-    background-image: url(/proyecto_web/assets/img/bannertullave.png);
+    background-image: url(/Ciclo3_Programacion/CodigoProyecto/FrontEnd/assets/img/bannertullave.png);
     height: 100px;
 }
 

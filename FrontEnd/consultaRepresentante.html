@@ -1,39 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
-
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Perfil Representante</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
-    <link rel="shortcut icon" href="/proyecto_web/assets/icons/recaudo.png" type="image/x-icon" />
+    <title>Consulta Representante</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="/proyecto_web/assets/icons/recaudo.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
     <!-- cabecera -->
     <header class="sticky-top">
-      <nav id="nav-repre" class="navbar navbar-dark ">
+      <nav id="nav-repre" class="navbar navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="inicioRepresentante.html" id="titulo_banner">
-            <img src="assets/icons/recaudo.png" alt="" width="30" height="24" class="d-inline-block align-text-top" />
+          <a
+            class="navbar-brand"
+            href="inicioRepresentante.html"
+            id="titulo_banner"
+          >
+            <img
+              src="assets/icons/recaudo.png"
+              alt=""
+              width="30"
+              height="24"
+              class="d-inline-block align-text-top"
+            />
             Gestor de Información Recaudo
           </a>
 
           <div class="d-flex" role="search">
             <div class="dropdown">
-              <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
+              <button
+                class="btn btn-dark dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 Representante
-                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="35"
-                  alt="Black and White Portrait of a Man" loading="lazy" />
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                  class="rounded-circle"
+                  height="35"
+                  alt="Black and White Portrait of a Man"
+                  loading="lazy"
+                />
               </button>
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item bg-warning" href="index.html">Salir</a>
+                  <a class="dropdown-item bg-warning" href="index.html"
+                    >Salir</a
+                  >
                 </li>
               </ul>
             </div>
@@ -50,10 +81,14 @@
             <!-- Left links -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-tabs">
-                <a class="nav-link" href="/proyecto_web/inicioRepresentante.html">Registrar Planillas</a>
+                <a class="nav-link" href="inicioRepresentante.html"
+                  >Registrar Planillas</a
+                >
               </li>
               <li class="nav-tabs">
-                <a class="nav-link" href="/proyecto_web/consultaRepresentante.html">Consultar Planillas</a>
+                <a class="nav-link" href="consultaRepresentante.html"
+                  >Consultar Planillas</a
+                >
               </li>
             </ul>
             <!-- Left links -->
@@ -65,133 +100,125 @@
       <!-- Navbar Menu-->
     </header>
 
-
     <!-- grilla de planillas -->
     <div class="container-fluid">
-      <div class="row">
+      <form class="row g-3">
         <div class="col-md-4">
-          <label for="nPlanilla" class="col-sm-4 col-form-label"># Planilla</label>
-          <div class="col-sm-8">
-            <input type="number" class="form-control" id="nPlanilla" required>
-            <button type="submit" class="btn btn-success mt-3">Consultar</button>
-          </div>
+          <label for="inputSelectBuscar" class="form-label">Buscar por:</label>
+          <select
+            id="idRepresentante"
+            class="form-select"
+            aria-label="Default select example"
+          >
+            <option selected>Seleccione</option>
+            <option value="1">Planilla</option>
+            <option value="2">Id Representante</option>
+            <option value="3">Nombre Punto</option>
+          </select>
         </div>
-        <div class="col-md-4">
-          <label for="idRepresentante" class="col-sm-4 col-form-label">Id Representante</label>
-          <div class="col-sm-8">
-            <select id="idRepresentante" onchange="rellenarRep()" class="form-select"
-              aria-label="Default select example">
-              <option selected>Seleccione</option>
-              <option value="1">1234568</option>
-              <option value="2">9854513</option>
-              <option value="3">1454545</option>
-              <option value="4">5587548</option>
-            </select>
-            <button type="submit" class="btn btn-success mt-3">Consultar</button>
-          </div>
+        <div class="col-md-4 mt-md-auto">
+          <input type="text" class="form-control" id="inputBuscar" />
         </div>
-        <div class="col-md-4">
-          <label for="nombrePunto" class="col-sm-4 col-form-label">Nombre del Punto</label>
-          <div class="col-sm-8">
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Seleccione</option>
-              <option value="1">Punto Recaudo Bogota Centro</option>
-              <option value="2">Punto Recaudo Bogota Sur</option>
-              <option value="3">Punto Recaudo Bogota Norte</option>
-            </select>
-            <button type="submit" class="btn btn-success mt-3">Consultar</button>
-          </div>
+        <div class="col-md-1 mt-md-auto">
+          <button id="botonBuscarEnRep" type="submit" class="btn btn-success">
+            Buscar
+          </button>
         </div>
-      </div>
+        <div class="col-md-3 mt-md-auto">
+          <label for="valorRecaudo" class="form-label">Valor Enviado</label>
+          <input
+            type="text"
+            class="form-control"
+            id="valorRecaudo"
+            disabled
+            value="15.258.545"
+          />
+        </div>
+      </form>
+    </div>
+
+    <div class="container-fluid">
+      <!-- table registros -->
       <div class="row mt-4">
         <div class="col-md-12">
           <table class="table table-hover table-sm">
             <thead>
-              <tr>
-                <th>
-                  #
-                </th>
-                <th>
-                  Product
-                </th>
-                <th>
-                  Payment Taken
-                </th>
-                <th>
-                  Status
-                </th>
+              <tr class="table-success">
+                <th>Fecha Recolección</th>
+                <th>Nro Planilla</th>
+                <th>$ Base</th>
+                <th>Valor Recaudo</th>
+                <th>Nro Sobre</th>
+                <th>Fecha Sobre</th>
+                <th>Observaciones</th>
+                <th>Tipo Sobre</th>
+                <th>Nombre Punto</th>
+                <th>Modelo</th>
+                <th>Id Dispositivo</th>
+                <th>ID Rep</th>
+                <th>Nombre Rep</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
-                  1
-                </td>
-                <td>
-                  TB - Monthly
-                </td>
-                <td>
-                  01/04/2012
-                </td>
-                <td>
-                  Default
-                </td>
+                <td>01/09/2022</td>
+                <td>123456</td>
+                <td>800.000</td>
+                <td>8.125.654</td>
+                <td>987654</td>
+                <td>01/09/2022</td>
+                <td>Observaciones varias</td>
+                <td>Base</td>
+                <td>Punto Recaudo Bogota Centro</td>
+                <td>Centro Comercial</td>
+                <td>1234568</td>
+                <td>5587548</td>
+                <td>Nombre Representante 3</td>
               </tr>
-              <tr class="table-active">
-                <td>
-                  1
-                </td>
-                <td>
-                  TB - Monthly
-                </td>
-                <td>
-                  01/04/2012
-                </td>
-                <td>
-                  Approved
-                </td>
+              <tr class="table-light">
+                <td>01/09/2022</td>
+                <td>123456</td>
+                <td>800.000</td>
+                <td>1.510.265</td>
+                <td>987654</td>
+                <td>01/09/2022</td>
+                <td>Observaciones varias</td>
+                <td>Base</td>
+                <td>Punto Recaudo Bogota Norte</td>
+                <td>Centro Comercial</td>
+                <td>4564212</td>
+                <td>4585454</td>
+                <td>Nombre Representante 2</td>
               </tr>
-              <tr class="table-success">
-                <td>
-                  2
-                </td>
-                <td>
-                  TB - Monthly
-                </td>
-                <td>
-                  02/04/2012
-                </td>
-                <td>
-                  Declined
-                </td>
+              <tr>
+                <td>01/09/2022</td>
+                <td>123456</td>
+                <td>800.000</td>
+                <td>3.146.258</td>
+                <td>987654</td>
+                <td>01/09/2022</td>
+                <td>Observaciones varias</td>
+                <td>Base</td>
+                <td>Punto Recaudo Bogota Centro</td>
+                <td>Centro Comercial</td>
+                <td>1234568</td>
+                <td>5587548</td>
+                <td>Nombre Representante 4</td>
               </tr>
-              <tr class="table-warning">
-                <td>
-                  3
-                </td>
-                <td>
-                  TB - Monthly
-                </td>
-                <td>
-                  03/04/2012
-                </td>
-                <td>
-                  Pending
-                </td>
-              </tr>
-              <tr class="table-danger">
-                <td>
-                  4
-                </td>
-                <td>
-                  TB - Monthly
-                </td>
-                <td>
-                  04/04/2012
-                </td>
-                <td>
-                  Call in to confirm
-                </td>
+              <tr class="table-light">
+                <td>01/09/2022</td>
+                <td>123456</td>
+                <td>800.000</td>
+                <td>2.158.945</td>
+                <td>987654</td>
+                <td>01/09/2022</td>
+                <td>Observaciones varias</td>
+                <td>Base</td>
+                <td>Punto Recaudo Bogota Sur</td>
+                <td>Centro Comercial</td>
+                <td>1234568</td>
+                <td>5587548</td>
+                <td>Nombre Representante 1</td>
               </tr>
             </tbody>
           </table>
@@ -201,24 +228,32 @@
     <!-- fin grilla de planillas -->
 
     <!-- Footer -->
-    <footer class="text-center text-lg-start bg-light text-muted mt-3 fixed-bottom">
+    <footer
+      class="text-center text-lg-start bg-light text-muted mt-3 fixed-bottom"
+    >
       <!-- Copyright -->
-      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
         © 2022 Copyright:
-        <a class="text-reset fw-bold">Grupo 66 Equipo 3 Mintic Gestor Información para Recaudo</a>
+        <a class="text-reset fw-bold"
+          >Grupo 66 Equipo 3 Mintic Gestor Información para Recaudo</a
+        >
       </div>
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
 
     <!--bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <!--sweetalert2-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- script js -->
     <script src="/proyecto_web/assets/js/rellenarRep.js"></script>
   </body>
-
 </html>
