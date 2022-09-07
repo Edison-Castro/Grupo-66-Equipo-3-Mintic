@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gestión Representante</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="/proyecto_web/assets/icons/recaudo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- cabecera -->
+    <header class="sticky-bottom">
+      <nav id="nav-repre" class="navbar navbar-dark">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand"
+            href="inicioLiderRecaudo.html"
+            id="titulo_banner"
+          >
+            <img
+              src="assets/icons/recaudo.png"
+              alt=""
+              width="30"
+              height="24"
+              class="d-inline-block align-text-top"
+            />
+            Gestor de Información Recaudo
+          </a>
+
+          <div class="d-flex" role="search">
+            <div class="dropdown">
+              <button
+                class="btn btn-dark dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Lider Recaudo
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
+                  class="rounded-circle"
+                  height="35"
+                  alt="Black and White Portrait of a Man"
+                  loading="lazy"
+                />
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item bg-warning" href="index.html"
+                    ><i class="bi bi-box-arrow-right p-1"></i>Salir</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Navbar Menu Admin-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-tabs">
+                <a class="nav-link" href="inicioLiderRecaudo.html"
+                  >Consultar Planillas</a
+                >
+              </li>
+              <li class="nav-tabs">
+                <a class="nav-link" href="gestionLiderRepre.html"
+                  >Gestion Representantes</a
+                >
+              </li>
+              <li class="nav-tabs">
+                <a class="nav-link" href="">Gestion Puntos</a>
+              </li>
+              <li class="nav-tabs">
+                <a class="nav-link" href="">Gestion Usuario</a>
+              </li>
+            </ul>
+            <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+      <!-- Navbar Menu Admin-->
+    </header>
+
+    <!-- body gestion representantes -->
+    <div class="card-header">
+      <div class="text-start m-3">
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#crearRepreModal">
+          <i class="bi bi-person-plus-fill p-md-1"></i>Crear Representante</button>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <!-- table registros -->
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <table class="table table-hover table-sm">
+            <thead>
+              <tr class="table-success">
+                <th>Id Representante</th>
+                <th>Nombre Representante</th>
+                <th><i class="bi bi-pencil-square p-1"></i>Editar</th>
+                <th><i class="bi bi-trash-fill p-1"></i>Eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>151548121</td>
+                <td>Nombre Representante 3</td>
+                <th><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editarRepreModal"><i class="bi bi-pencil-square p-1"></i>Editar</button></th>
+                <th><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarModal"><i class="bi bi-trash-fill p-1"></i>Eliminar</button></th>
+              </tr>
+              <tr class="table-light">
+                <td>121454456</td>
+                <td>Nombre Representante 2</td>
+                <th><button type="button" class="btn btn-warning"><i class="bi bi-pencil-square p-1"></i>Editar</button></th>
+                <th><button type="button" class="btn btn-danger"><i class="bi bi-trash-fill p-1"></i>Eliminar</button></th>
+              </tr>
+              <tr>
+                <td class="col-md-2">14457875</td>
+                <td class="col-md-7">Nombre Representante 4</td>
+                <th><button type="button" class="btn btn-warning"><i class="bi bi-pencil-square p-1"></i>Editar</button></th>
+                <th><button type="button" class="btn btn-danger"><i class="bi bi-trash-fill p-1"></i>Eliminar</button></th>
+              </tr>
+              <tr class="table-light">
+                <td>454875111</td>
+                <td>Nombre Representante 1</td>
+                <th class="col-md-2"><button type="button" class="btn btn-warning"><i class="bi bi-pencil-square p-1"></i>Editar</button></th>
+                <th class="col-md-2"><button type="button" class="btn btn-danger"><i class="bi bi-trash-fill p-1"></i></i>Eliminar</button></th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- fin grilla de planillas -->
+    
+
+    <!-- fin body gestion representante -->
+
+    <!-- Footer -->
+    <footer
+      class="text-center text-lg-start bg-light text-muted mt-3 fixed-bottom"
+    >
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2022 Copyright:
+        <a class="text-reset fw-bold"
+          >Grupo 66 Equipo 3 Mintic Gestor Información para Recaudo</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- Modal crear representante -->
+    <div class="modal fade" id="crearRepreModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="crearModalLabel">Crear Representante</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="idRep" class="col-form-label">Id Representante</label>
+                <input type="number" class="form-control" id="idRep">
+              </div>
+              <div class="mb-3">
+                <label for="name-text" class="col-form-label">Nombre Representante</label>
+                <input type="text" class="form-control" id="name-text"></input>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-outline-success" data-bs-dismiss="modal" onclick="alert('Info Almacenada')">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal editar representante -->
+    <div class="modal fade" id="editarRepreModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editarModalLabel">Editar Representante</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="idRep" class="col-form-label">Id Representante</label>
+                <input type="number" class="form-control" id="idRep">
+              </div>
+              <div class="mb-3">
+                <label for="name-text" class="col-form-label">Nombre Representante</label>
+                <input type="text" class="form-control" id="name-text"></input>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-outline-success" data-bs-dismiss="modal" onclick="alert('Info Almacenada')">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal eliminar representante-->
+    <div class="modal fade" id="eliminarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h5 class="modal-title" id="eliminarModalLabel"><i class="bi bi-info-square-fill"></i></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center">
+            <h5>Esta seguro que desea eliminar este Registro</h5>
+            <h7>Operación Irreversible</h7>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Si</button>
+            <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--bootstrap-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <!--sweetalert2-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- script js -->
+    <script src="/proyecto_web/assets/js/rellenarRep.js"></script>
+  </body>
+</html>
