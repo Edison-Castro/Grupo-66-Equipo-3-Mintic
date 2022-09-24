@@ -25,7 +25,7 @@
 
   <body>
     <!-- cabecera -->
-    <header class="sticky-top">
+    <header  class="sticky-top">
       <nav id="nav-repre" class="navbar navbar-dark">
         <div class="container-fluid">
           <a
@@ -113,8 +113,7 @@
             <option selected>Seleccione</option>
             <option value="1">Planilla</option>
             <option value="2">Id Representante</option>
-            <option value="3">Nombre Punto</option>
-          </select>
+            </select>
         </div>
         <div class="col-md-4 mt-md-auto">
           <input type="text" class="form-control" id="inputBuscar" />
@@ -133,7 +132,23 @@
             disabled
             value="15.258.545"
           />
+          
         </div>
+        
+        <div class="col-md-2 mt-md-auto">
+          <br>
+          <label for="Cantidad Sobres" class="form-label">Cantidad sobres</label>
+          <input
+            type="text"
+            class="form-control"
+            id="cantidadSobres"
+            disabled
+            value="5"
+          />
+        </div>
+
+
+
       </form>
     </div>
 
