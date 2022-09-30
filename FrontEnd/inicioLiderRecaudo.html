@@ -142,92 +142,22 @@
           <table class="table table-hover table-sm">
             <thead>
               <tr class="table-success">
-                <th>Fecha Recolección</th>
                 <th>Nro Planilla</th>
                 <th>$ Base</th>
-                <th>Valor Recaudo</th>
-                <th>Nro Sobre</th>
+                <th>Fecha Recolección</th>
                 <th>Fecha Sobre</th>
+                <th>Nro Sobre</th>
                 <th>Observaciones</th>
-                <th>Tipo Sobre</th>
-                <th>Nombre Punto</th>
-                <th>Modelo</th>
+                <th>Valor Recaudo</th>
                 <th>Id Dispositivo</th>
-                <th>ID Rep</th>
+                <th>Modelo</th>
+                <th>Nombre Punto</th>
                 <th>Nombre Rep</th>
-                <th><i class="bi bi-pencil-square"></i> Editar</th>
-                <th><i class="bi bi-trash-fill"></i> Eliminar</th>
+                <th>Tipo Sobre</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>01/09/2022</td>
-                <td>123456</td>
-                <td>800.000</td>
-                <td>2.150.000</td>
-                <td>987654</td>
-                <td>01/09/2022</td>
-                <td>Observaciones varias</td>
-                <td>Base</td>
-                <td>Punto Recaudo Bogota Centro</td>
-                <td>Centro Comercial</td>
-                <td>1234568</td>
-                <td>5587548</td>
-                <td>Nombre Representante 3</td>
-                <th><button type="button" class="btn btn-warning"><i class="bi bi-pencil-square p-1"></i>Editar</button></th>
-                <th><button type="button" class="btn btn-danger"><i class="bi bi-trash-fill p-1"></i>Eliminar</button></th>
-              </tr>
-              <tr class="table-light">
-                <td>01/09/2022</td>
-                <td>123456</td>
-                <td>800.000</td>
-                <td>3.150.000</td>
-                <td>987654</td>
-                <td>01/09/2022</td>
-                <td>Observaciones varias</td>
-                <td>Base</td>
-                <td>Punto Recaudo Bogota Norte</td>
-                <td>Centro Comercial</td>
-                <td>4564212</td>
-                <td>4585454</td>
-                <td>Nombre Representante 2</td>
-                <th><button type="button" class="btn btn-warning"><i class="bi bi-pencil-square p-1"></i>Editar</button></th>
-                <th><button type="button" class="btn btn-danger"><i class="bi bi-trash-fill p-1"></i>Eliminar</button></th>
-              </tr>
-              <tr>
-                <td>01/09/2022</td>
-                <td>123456</td>
-                <td>800.000</td>
-                <td>1.150.000</td>
-                <td>987654</td>
-                <td>01/09/2022</td>
-                <td>Observaciones varias</td>
-                <td>Base</td>
-                <td>Punto Recaudo Bogota Centro</td>
-                <td>Centro Comercial</td>
-                <td>1234568</td>
-                <td>5587548</td>
-                <td>Nombre Representante 4</td>
-                <th><button type="button" class="btn btn-warning"><i class="bi bi-pencil-square p-1"></i>Editar</button></th>
-                <th><button type="button" class="btn btn-danger"><i class="bi bi-trash-fill p-1"></i>Eliminar</button></th>
-              </tr>
-              <tr class="table-light">
-                <td>01/09/2022</td>
-                <td>123456</td>
-                <td>800.000</td>
-                <td>8.150.000</td>
-                <td>987654</td>
-                <td>01/09/2022</td>
-                <td>Observaciones varias</td>
-                <td>Base</td>
-                <td>Punto Recaudo Bogota Sur</td>
-                <td>Centro Comercial</td>
-                <td>1234568</td>
-                <td>5587548</td>
-                <td>Nombre Representante 1</td>
-                <th><button type="button" class="btn btn-warning"><i class="bi bi-pencil-square p-1"></i>Editar</button></th>
-                <th><button type="button" class="btn btn-danger"><i class="bi bi-trash-fill p-1"></i>Eliminar</button></th>
-              </tr>
+            <tbody id="tableBody_planilla">
+    
             </tbody>
           </table>
         </div>
@@ -264,5 +194,6 @@
     <!-- script js -->
     <script src="/proyecto_web/assets/js/rellenarRep.js"></script>
     <script src="/proyecto_web/assets/js/index.js"></script>
+    <script src="assets/js/indexPlanillas.js"></script>
   </body>
 </html>
