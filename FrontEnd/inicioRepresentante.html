@@ -83,28 +83,28 @@
                 <div class="row mb-3">
                   <label for="nPlanilla" class="col-sm-4 col-form-label"># Planilla</label>
                   <div class="col-sm-8">
-                    <input type="number" class="form-control" id="nPlanilla" required>
+                    <input type="number" class="form-control" id="nPlanilla" >
                   </div>
                 </div>
                 <!-- dinero base -->
                 <div class="row mb-3">
                   <label for="base" class="col-sm-4 col-form-label">Base $</label>
                   <div class="col-sm-8">
-                    <input type="number" class="form-control" id="base" required>
+                    <input type="number" class="form-control" id="base" >
                   </div>
                 </div>
                 <!-- valor recaudo -->
                 <div class="row mb-3">
                   <label for="valorRecaudo" class="col-sm-4 col-form-label">Valor Recaudo $</label>
                   <div class="col-sm-8">
-                    <input type="number" class="form-control" id="valorRecaudo" required>
+                    <input type="number" class="form-control" id="valorRecaudo" >
                   </div>
                 </div>
                 <!-- consecutivo sobre -->
                 <div class="row mb-3">
                   <label for="consecutivoSobre" class="col-sm-4 col-form-label">Consecutivo Sobre</label>
                   <div class="col-sm-8">
-                    <input type="number" class="form-control" id="consecutivoSobre" required>
+                    <input type="number" class="form-control" id="consecutivoSobre" >
                   </div>
                 </div>
                 <!-- fecha sobre -->
@@ -202,12 +202,8 @@
                 <br/>
                 <!-- boton de registro -->
                 <div class="text-center">
-                  <button id="registroPlanillaButtom" type="submit" class="btn btn-primary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                      class="bi bi-save" viewBox="0 0 16 16">
-                      <path
-                        d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z" />
-                    </svg>
+                  <button id="registroPlanillaButtom" type="submit" class="btn btn-primary" onclick="agregarPlanilla()">
+                    <i class="bi bi-save-fill"></i>
                     Registrar
                   </button>
                 
@@ -252,13 +248,7 @@
               <!-- boton de tripulante -->
               <div class="text-center">
                 <button id="registroTripulanteButtom" type="submit" class="btn btn-primary">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-clipboard2-check-fill" viewBox="0 0 16 16">
-                    <path
-                      d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5Z" />
-                    <path
-                      d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585c.055.156.085.325.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5c0-.175.03-.344.085-.5Zm6.769 6.854-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708.708Z" />
-                  </svg>
+                  <i class="bi bi-clipboard-check-fill"></i>
                   Copiar
                 </button>
               </div>
@@ -287,6 +277,7 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- script js -->
     <script src="assets/js/rellenarRep.js"></script>
+    <script src="assets/js/regisPlanillas.js"></script>
   </body>
 
 </html>
